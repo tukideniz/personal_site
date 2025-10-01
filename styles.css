@@ -1,0 +1,40 @@
+/* CV Layout (A4-like, print friendly) */
+:root {
+  --text: #111;
+  --muted: #333;
+  --green: #000000;
+}
+
+* { box-sizing: border-box; }
+body.cv-bg { margin: 0; background: #f3f3f3; font-family: Inter, Arial, sans-serif; color: var(--text); }
+.page { width: min(900px, 92%); margin: 16px auto; background: #fff; padding: 28px 22px; box-shadow: 0 0 0.6rem rgba(0,0,0,0.08); }
+
+.cv-header h1 { font-size: 22px; font-weight: 700; margin: 0; text-align: center; letter-spacing: 0.03em; }
+.contact-line { text-align: center; margin: 4px 0 10px; color: var(--muted); font-size: 12px; }
+.contact-line a { color: var(--muted); text-decoration: none; }
+
+.cv-section { margin-top: 12px; }
+.cv-section h2 { font-size: 13px; letter-spacing: 0.08em; margin: 0 0 6px; }
+.hr { height: 3px; background: var(--green); margin: 4px 0 8px; }
+
+.bullets { margin: 0; padding-left: 18px; font-size: 12px; }
+.bullets li { margin: 4px 0; }
+
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.experience .role { margin-bottom: 8px; }
+.role-head { display: flex; justify-content: flex-start; align-items: baseline; gap: 12px; font-size: 12px; }
+.role-head strong { font-weight: 700; }
+.role-head span { color: var(--muted); }
+
+.projects .project { margin-bottom: 8px; }
+.project-head { font-size: 12px; font-weight: 700; }
+.projects p { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+
+@media print {
+  body.cv-bg { background: #fff; }
+  .page { width: 210mm; margin: 0; padding: 18mm 16mm; box-shadow: none; }
+}
+
+
+
